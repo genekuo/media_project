@@ -18,9 +18,11 @@ def media_example(request):
             print(image.width)
             print(image.height)
             #image.thumbnail((500, 400))
+            print(image.info['dpi'])
             image_1 = image.resize((500, 400))
             print(image_1.width)
             print(image_1.height)
+            print(image_1.info['dpi'])
             image_1.save(save_path)
             
             instance = form.save()
